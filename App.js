@@ -474,7 +474,7 @@ function ProfileScreen() {
       <View style={styles.profileBanner}>
         <View style={styles.avatarOverlap}>
           <View style={styles.avatarCircle}>
-            <Text style={styles.avatarLetter}>K</Text>
+            <Text style={styles.avatarLetter}>D</Text>
           </View>
           <TouchableOpacity style={styles.cameraIconBadge} activeOpacity={0.8}>
             <SvgIcon name="ic_camera_avatar" width={14} height={14} color="#555555" />
