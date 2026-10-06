@@ -324,7 +324,6 @@ function AllAppsScreen() {
               placeholderTextColor="#8E8E93"
               value={searchQuery}
               onChangeText={setSearchQuery}
-              clearButtonMode="while-editing"
             />
             {searchQuery.length > 0 && (
               <TouchableOpacity onPress={() => setSearchQuery('')}>
