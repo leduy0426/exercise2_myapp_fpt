@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "exercise1_myapp_fpt",
+    "slug": "exercise1_myapp_fpt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}
