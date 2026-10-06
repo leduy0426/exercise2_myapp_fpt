@@ -73,7 +73,14 @@ export function SvgIcon({ name, width = 24, height = 24, color, style }) {
 
     if (SvgXml) {
       let styledXml = xml;
-      if (color) {
+      // Do not apply tint color replacement to multi-color icons (e.g. gold icons, gradient icons)
+      const isMultiColorIcon =
+        name.includes('gold') ||
+        xml.includes('url(#') ||
+        xml.includes('fill="#ffffff"') ||
+        xml.includes('fill="#fff"');
+
+      if (color && !isMultiColorIcon) {
         styledXml = styledXml.replace(/fill="#[0-9a-fA-F]{6}"/g, `fill="${color}"`);
         styledXml = styledXml.replace(/stroke="#[0-9a-fA-F]{6}"/g, `stroke="${color}"`);
       }

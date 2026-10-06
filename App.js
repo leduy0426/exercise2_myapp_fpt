@@ -255,10 +255,8 @@ function AllAppsScreen() {
   const filterItems = (items) => {
     if (!searchQuery.trim()) return items;
     const query = searchQuery.toLowerCase();
-    return items.filter(
-      (item) =>
-        item.title.toLowerCase().includes(query) ||
-        (item.desc && item.desc.toLowerCase().includes(query))
+    return items.filter((item) =>
+      item.title.toLowerCase().includes(query)
     );
   };
 
@@ -531,7 +529,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollPadding: {
-    paddingBottom: 20,
+    paddingBottom: Platform.OS === 'android' ? 36 : 20,
   },
   placeholderContainer: {
     flex: 1,
@@ -775,8 +773,8 @@ const styles = StyleSheet.create({
   },
   // Bottom Bar
   bottomNav: {
-    height: Platform.OS === 'ios' ? 62 : 56,
-    paddingBottom: Platform.OS === 'ios' ? 8 : 4,
+    height: Platform.OS === 'ios' ? 64 : 72,
+    paddingBottom: Platform.OS === 'ios' ? 10 : 20,
     backgroundColor: '#FFFFFF',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: '#D1D1D6',
