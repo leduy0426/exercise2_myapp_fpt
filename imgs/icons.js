@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 let SvgXml = null;
@@ -48,18 +48,37 @@ export const SVG_ICONS = {
   "ic_grid": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20.0\" height=\"20.0\" viewBox=\"0 0 20.0 20.0\">\n    <path d=\"M9.111,2.037A0.37,0.37 0,0 0,8.741 1.667L2.037,1.667A0.37,0.37 0,0 0,1.667 2.037v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM8.367,8.367L2.408,8.367L2.408,2.408L8.367,2.408ZM8.367,8.367\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n  <path d=\"M18.333,2.037a0.37,0.37 0,0 0,-0.37 -0.37h-6.7a0.37,0.37 0,0 0,-0.37 0.37v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM17.593,8.367h-5.963L11.63,2.408h5.963ZM17.593,8.367\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n  <path d=\"M9.111,11.259a0.37,0.37 0,0 0,-0.37 -0.37L2.037,10.889a0.37,0.37 0,0 0,-0.37 0.37v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM8.37,17.559L2.408,17.559v-5.926L8.367,11.633ZM8.37,17.559\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n  <path d=\"M18.333,11.259a0.37,0.37 0,0 0,-0.37 -0.37h-6.7a0.37,0.37 0,0 0,-0.37 0.37v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM17.592,17.559h-5.963v-5.926h5.963ZM17.592,17.559\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n</svg>",
   "ic_arrow_next_non_circle": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"36.0\" height=\"36.0\" viewBox=\"0 0 36.0 36.0\">\n    <path d=\"M14.276,12.255a0.777,0.777 0,0 1,0.482 0.169L22.207,18.416a0.768,0.768 0,0 1,0 1.2L14.789,25.574A0.768,0.768 0,0 1,13.827 24.377L20.5,19.014 13.794,13.621a0.767,0.767 0,0 1,0.482 -1.366Z\" fill=\"#b3b3b3\" fill-opacity=\"0.65\" />\n</svg>",
   "ic_arrow_right_16": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16.0\" height=\"17.0\" viewBox=\"0 0 16.0 17.0\">\n  <path d=\"M6,12.241L9.293,8.948C9.626,8.614 9.793,8.448 9.793,8.24C9.793,8.033 9.626,7.867 9.293,7.533L6,4.24\" fill=\"none\" stroke=\"#737373\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n</svg>",
-  "ic_chevron_right": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"36.0\" height=\"36.0\" viewBox=\"0 0 36.0 36.0\">\n    <path d=\"M14.276,12.255a0.777,0.777 0,0 1,0.482 0.169L22.207,18.416a0.768,0.768 0,0 1,0 1.2L14.789,25.574A0.768,0.768 0,0 1,13.827 24.377L20.5,19.014 13.794,13.621a0.767,0.767 0,0 1,0.482 -1.366Z\" fill=\"#b3b3b3\" fill-opacity=\"0.65\" />\n</svg>"
+  "ic_chevron_right": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"36.0\" height=\"36.0\" viewBox=\"0 0 36.0 36.0\">\n    <path d=\"M14.276,12.255a0.777,0.777 0,0 1,0.482 0.169L22.207,18.416a0.768,0.768 0,0 1,0 1.2L14.789,25.574A0.768,0.768 0,0 1,13.827 24.377L20.5,19.014 13.794,13.621a0.767,0.767 0,0 1,0.482 -1.366Z\" fill=\"#b3b3b3\" fill-opacity=\"0.65\" />\n</svg>",
+  "icon_bot_nav_gold_active": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"28.0\" height=\"28.0\" viewBox=\"0 0 28.0 28.0\">\n  <path d=\"M14,14m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0\" fill=\"#185ece\" />\n  <path d=\"M14,14m-13.5,0a13.5,13.5 0,1 1,27 0a13.5,13.5 0,1 1,-27 0\" fill=\"none\" stroke=\"#fafafa\" stroke-width=\"1.0\" />\n  <g>\n    <path d=\"M14,14m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0\" fill=\"#ffffff\" />\n    <path d=\"M14,14m-6.4,0a6.4,6.4 0,1 1,12.8 0a6.4,6.4 0,1 1,-12.8 0\" fill=\"#ffffff\" />\n    <path d=\"M14,14m-5.9,0a5.9,5.9 0,1 1,11.8 0a5.9,5.9 0,1 1,-11.8 0\" fill=\"none\" stroke=\"#185ece\" stroke-width=\"1.0\" />\n    <path d=\"M14,11.333L14,11.333A0.8,0.8 0,0 1,14.8 12.133L14.8,15.866A0.8,0.8 0,0 1,14 16.666L14,16.666A0.8,0.8 0,0 1,13.2 15.866L13.2,12.133A0.8,0.8 0,0 1,14 11.333z\" fill=\"#185ece\" />\n  </g>\n</svg>",
+  "ic_icon_bot_nav_gold_active": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"28.0\" height=\"28.0\" viewBox=\"0 0 28.0 28.0\">\n  <path d=\"M14,14m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0\" fill=\"#185ece\" />\n  <path d=\"M14,14m-13.5,0a13.5,13.5 0,1 1,27 0a13.5,13.5 0,1 1,-27 0\" fill=\"none\" stroke=\"#fafafa\" stroke-width=\"1.0\" />\n  <g>\n    <path d=\"M14,14m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0\" fill=\"#ffffff\" />\n    <path d=\"M14,14m-6.4,0a6.4,6.4 0,1 1,12.8 0a6.4,6.4 0,1 1,-12.8 0\" fill=\"#ffffff\" />\n    <path d=\"M14,14m-5.9,0a5.9,5.9 0,1 1,11.8 0a5.9,5.9 0,1 1,-11.8 0\" fill=\"none\" stroke=\"#185ece\" stroke-width=\"1.0\" />\n    <path d=\"M14,11.333L14,11.333A0.8,0.8 0,0 1,14.8 12.133L14.8,15.866A0.8,0.8 0,0 1,14 16.666L14,16.666A0.8,0.8 0,0 1,13.2 15.866L13.2,12.133A0.8,0.8 0,0 1,14 11.333z\" fill=\"#185ece\" />\n  </g>\n</svg>",
+  "ic_gold_point_recognize_disable": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22.0\" height=\"22.0\" viewBox=\"0 0 18.0 18.0\">\n  <g>\n    <path d=\"M9,9m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0\" fill=\"#969696\" />\n    <path d=\"M9,9m-7.2,0a7.2,7.2 0,1 1,14.4 0a7.2,7.2 0,1 1,-14.4 0\" fill=\"#969696\" />\n    <path d=\"M9,9m-6.7,0a6.7,6.7 0,1 1,13.4 0a6.7,6.7 0,1 1,-13.4 0\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.0\" />\n    <path d=\"M9,6L9,6A0.9,0.9 0,0 1,9.9 6.9L9.9,11.1A0.9,0.9 0,0 1,9 12L9,12A0.9,0.9 0,0 1,8.1 11.1L8.1,6.9A0.9,0.9 0,0 1,9 6z\" fill=\"#fafafa\" />\n  </g>\n</svg>",
+  "ic_common_gridview": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20.0\" height=\"20.0\" viewBox=\"0 0 20.0 20.0\">\n    <path d=\"M9.111,2.037A0.37,0.37 0,0 0,8.741 1.667L2.037,1.667A0.37,0.37 0,0 0,1.667 2.037v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM8.367,8.367L2.408,8.367L2.408,2.408L8.367,2.408ZM8.367,8.367\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n  <path d=\"M18.333,2.037a0.37,0.37 0,0 0,-0.37 -0.37h-6.7a0.37,0.37 0,0 0,-0.37 0.37v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM17.593,8.367h-5.963L11.63,2.408h5.963ZM17.593,8.367\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n  <path d=\"M9.111,11.259a0.37,0.37 0,0 0,-0.37 -0.37L2.037,10.889a0.37,0.37 0,0 0,-0.37 0.37v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM8.37,17.559L2.408,17.559v-5.926L8.367,11.633ZM8.37,17.559\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n  <path d=\"M18.333,11.259a0.37,0.37 0,0 0,-0.37 -0.37h-6.7a0.37,0.37 0,0 0,-0.37 0.37v6.7a0.37,0.37 0,0 0,0.37 0.37h6.7a0.37,0.37 0,0 0,0.37 -0.37ZM17.592,17.559h-5.963v-5.926h5.963ZM17.592,17.559\" fill=\"#666\" stroke=\"#666\" stroke-width=\"0.6\" />\n</svg>",
+  "ic_common_listview": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20.0\" height=\"20.0\" viewBox=\"0 0 20.0 20.0\">\n  <path d=\"M2,4h16v2H2zM2,9h16v2H2zM2,14h16v2H2z\" fill=\"#666\" />\n</svg>"
 };
 
 export function SvgIcon({ name, width = 24, height = 24, color, style }) {
   let xml = SVG_ICONS[name];
   
-  if (SvgXml && xml) {
-    if (color) {
-      xml = xml.replace(/fill="#[0-9a-fA-F]{6}"/g, `fill="${color}"`);
-      xml = xml.replace(/stroke="#[0-9a-fA-F]{6}"/g, `stroke="${color}"`);
+  if (xml) {
+    const base64Match = xml.match(/href=["'](data:image\/[^"']+)["']/);
+    if (base64Match && base64Match[1]) {
+      return (
+        <Image
+          source={{ uri: base64Match[1] }}
+          style={[{ width, height }, style]}
+          resizeMode="contain"
+        />
+      );
     }
-    return <SvgXml xml={xml} width={width} height={height} style={style} />;
+
+    if (SvgXml) {
+      let styledXml = xml;
+      if (color) {
+        styledXml = styledXml.replace(/fill="#[0-9a-fA-F]{6}"/g, `fill="${color}"`);
+        styledXml = styledXml.replace(/stroke="#[0-9a-fA-F]{6}"/g, `stroke="${color}"`);
+      }
+      return <SvgXml xml={styledXml} width={width} height={height} style={style} />;
+    }
   }
 
   // Fallback vector icon
@@ -111,37 +130,12 @@ export function SvgIcon({ name, width = 24, height = 24, color, style }) {
   };
 
   const fallback = vectorMap[name] || { type: 'ion', icon: 'help-circle-outline' };
-  const isTabActive = name && name.endsWith('_active');
-  const iconColor = color || (isTabActive ? '#FFFFFF' : '#0066CC');
+  const iconColor = color || '#0066CC';
 
-  let iconNode = null;
   if (fallback.type === 'mci') {
-    iconNode = <MaterialCommunityIcons name={fallback.icon} size={isTabActive ? 16 : width} color={iconColor} style={style} />;
-  } else {
-    iconNode = <Ionicons name={fallback.icon} size={isTabActive ? 16 : width} color={iconColor} style={style} />;
+    return <MaterialCommunityIcons name={fallback.icon} size={width} color={iconColor} style={style} />;
   }
-
-  if (isTabActive) {
-    return (
-      <View
-        style={[
-          {
-            width: width || 28,
-            height: height || 28,
-            borderRadius: (width || 28) / 2,
-            backgroundColor: '#0066CC',
-            justify: 'center',
-            alignItems: 'center',
-          },
-          style,
-        ]}
-      >
-        {iconNode}
-      </View>
-    );
-  }
-
-  return iconNode;
+  return <Ionicons name={fallback.icon} size={width} color={iconColor} style={style} />;
 }
 
 export default SvgIcon;

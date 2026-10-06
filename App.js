@@ -531,7 +531,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollPadding: {
-    paddingBottom: 80,
+    paddingBottom: 20,
   },
   placeholderContainer: {
     flex: 1,
@@ -775,11 +775,8 @@ const styles = StyleSheet.create({
   },
   // Bottom Bar
   bottomNav: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 60,
+    height: Platform.OS === 'ios' ? 62 : 56,
+    paddingBottom: Platform.OS === 'ios' ? 8 : 4,
     backgroundColor: '#FFFFFF',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: '#D1D1D6',
